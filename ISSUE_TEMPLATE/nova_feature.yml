@@ -1,0 +1,61 @@
+name: "🚀 Nova Funcionalidade / Implementação"
+description: Propor ou detalhar o desenvolvimento de um novo recurso ou automação.
+title: "[FEATURE]: "
+labels: ["feature", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por sugerir uma nova implementação! Por favor, preencha os campos abaixo para ajudar o time no desenvolvimento.
+
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: "🎯 Objetivo e Contexto"
+      description: Explique o que precisa ser desenvolvido e qual problema ou dor isso resolve.
+      placeholder: "Ex: Precisamos criar um script Terraform para provisionar o bucket S3 de logs de forma automática..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: requisitos
+    attributes:
+      label: "📋 Critérios de Aceite"
+      description: O que o desenvolvimento precisa cumprir para ser considerado finalizado? (Use uma lista).
+      value: |
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impacto-infra
+    attributes:
+      label: "🛠️ Impacto em DevOps / Infraestrutura"
+      description: Essa mudança exige alterações de infraestrutura ou novas variáveis de ambiente?
+      options:
+        - "Não exige alterações de infraestrutura"
+        - "Sim, requer novas variáveis de ambiente (Secrets)"
+        - "Sim, requer criação/alteração de recursos em nuvem"
+        - "Não aplicável / Apenas documentação"
+    validations:
+      required: true
+
+  - type: textarea
+    id: detalhes-tecnicos
+    attributes:
+      label: "💻 Detalhes Técnicos (Opcional)"
+      description: Sugestões de arquitetura, ferramentas, endpoints ou trechos de código.
+      placeholder: "Ex: Utilizar a imagem Docker x.y.z no workflow do GitHub Actions..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist-seguranca
+    attributes:
+      label: "🛡️ Validações de Segurança"
+      options:
+        - label: "A proposta segue as práticas de privilégio mínimo?"
+          required: false
+        - label: "Haverá exposição de dados sensíveis?"
+          required: false
